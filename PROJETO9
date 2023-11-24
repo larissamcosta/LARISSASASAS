@@ -1,0 +1,37 @@
+Passo 1: Crie a pasta "utils" dentro do diretório "src".
+
+Passo 2: Dentro da pasta "utils", crie um arquivo chamado "mensagem.js" com o seguinte conteúdo:
+
+jsx
+Copy code
+// utils/mensagem.js
+const obterMensagem = () => {
+  return "Bem-vindo à minha aplicação React!";
+};
+
+export default obterMensagem;
+Passo 3: Agora, dentro do seu componente App.js, importe a função e use-a para exibir a mensagem:
+
+jsx
+Copy code
+// src/App.js
+import React from 'react';
+import './App.css';
+import obterMensagem from './utils/mensagem';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>
+          {obterMensagem()}
+        </p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+Passo 4: Lembre-se de iniciar ou reiniciar o servidor de desenvolvimento para ver as alterações (por exemplo, usando npm start).
+
+Agora, quando você acessar http://localhost:3000/, verá a mensagem definida na função "obterMensagem" sendo exibida. Certifique-se de seguir as instruções para exportar a função corretamente.
